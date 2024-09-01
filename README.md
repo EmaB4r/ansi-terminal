@@ -1,1 +1,1 @@
-# ansi-terminal
+# ansi-terminal-controller
