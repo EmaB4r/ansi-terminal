@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 void clear_terminal(){
-    puts(ANSI_ERASE_WHOLE_SCREEN);
+    fputs(ANSI_ERASE_WHOLE_SCREEN, stdout);
 }
 
 
@@ -24,7 +24,7 @@ void terminal_set_rgb_background(int r, int g, int b){
 }
 
 void terminal_reset_color(){
-    puts("\e[0m");
+    fputs("\e[0m", stdout);
 }
 
 void terminal_set_size(int h, int w){
