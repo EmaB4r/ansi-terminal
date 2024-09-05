@@ -24,7 +24,7 @@ void terminal_set_rgb_background(int r, int g, int b){
 }
 
 void terminal_reset_color(){
-    puts("\e[0m");
+    fputs("\e[0m", stdout);
 }
 
 void terminal_set_size(int h, int w){
@@ -46,4 +46,7 @@ void terminal_cursor_left(int n){
 }
 void terminal_cursor_right(int n){
     printf("\e[%dC", n);
+}
+void terminal_hide_cursor(){
+    fputs("\e[?25l", stdout);
 }

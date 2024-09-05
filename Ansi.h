@@ -63,4 +63,6 @@ void terminal_cursor_down(int n);
 void terminal_cursor_left(int n);
 void terminal_cursor_right(int n);
 
+void terminal_hide_cursor();
+
 #endif
