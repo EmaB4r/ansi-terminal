@@ -47,3 +47,10 @@ void terminal_cursor_left(int n){
 void terminal_cursor_right(int n){
     printf("\e[%dC", n);
 }
+
+void terminal_hide_cursor(){
+    fputs("\e[?25l", stdout);
+}
+void terminal_show_cursor(){
+    fputs("\e[?25h", stdout);
+}
