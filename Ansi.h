@@ -53,15 +53,18 @@ void clear_terminal();
 void terminal_set_size(int h, int w);
 void terminal_set_text_color(char* color);
 void terminal_set_background_color(char* color);
-void terminal_set_rgb_text(int r, int g, int b);
-void terminal_set_rgb_background(int r, int g, int b);
+void terminal_set_rgb_text(unsigned char r, unsigned char g, unsigned char b);
+void terminal_set_rgb_background(unsigned char r, unsigned char g, unsigned char b);
 void terminal_reset_color();
 void terminal_set_font(int size);
 
+void terminal_save_cursor_pos();
+void terminal_restore_cursor_pos();
 void terminal_cursor_up(int n);
 void terminal_cursor_down(int n);
 void terminal_cursor_left(int n);
 void terminal_cursor_right(int n);
+void terminal_set_cursor_pos(int row, int col);
 
 void terminal_hide_cursor();
 void terminal_show_cursor();
