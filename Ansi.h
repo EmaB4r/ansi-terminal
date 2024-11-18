@@ -1,6 +1,8 @@
 #ifndef ANSI_H
 #define ANSI_H
 #include <stdio.h>
+#define ANSI_BOLD "1"
+#define ANSI_UNDERLINED "4"
 #define ANSI_ESCAPE "\e["
 #define ANSI_BELL "\07"
 #define ANSI_ENDCODE "m"
@@ -28,6 +30,9 @@
 #define ANSI_BG_DEFAULT_COLOR	"49"
 
 #define ANSI_RESET_COLOR	"\e[0m"
+
+#define TEXT_BOLD(text) ANSI_ESCAPE ANSI_BOLD "m" text ANSI_RESET_COLOR
+#define TEXT_UNDERLINED(text) ANSI_ESCAPE ANSI_UNDERLINED "m" text ANSI_RESET_COLOR
 
 #define TEXT_BLACK(text) ANSI_ESCAPE ANSI_BLACK_COLOR "m" text ANSI_RESET_COLOR
 #define TEXT_RED(text) ANSI_ESCAPE ANSI_RED_COLOR "m" text ANSI_RESET_COLOR
